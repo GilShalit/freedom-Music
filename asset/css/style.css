@@ -404,7 +404,7 @@ hr {
 
 ul, ol {
     margin: 0;
-    padding-left: 2rem
+    padding-inline-start: 2rem
 }
 
 ul {
@@ -431,12 +431,12 @@ ol {
         ol li::marker {
             color: var(--primary);
             font-weight: 600;
-            margin-right: 15px
+            margin-inline-end: 15px
         }
 
 li > ul, li > ol {
     margin-bottom: 0;
-    margin-left: 1.5em
+    margin-inline-start: 1.5em
 }
 
 dt {
@@ -535,12 +535,12 @@ figure {
         font-size: .75rem;
         font-weight: 600;
         margin-bottom: 10px;
-        margin-right: 10px;
+        margin-inline-end: 10px;
         padding: 5px 10px
     }
 
         .resource-tags .resource-tag:last-child {
-            margin-right: 0
+            margin-inline-end: 0
         }
 
 table {
@@ -585,7 +585,7 @@ table {
     color: #36475a;
     font-size: 1.2rem;
     line-height: 1;
-    margin-left: 5px;
+    margin-inline-start: 5px;
     position: relative
 }
 
@@ -604,7 +604,7 @@ table {
         color: #fff;
         font-size: .75rem;
         left: 50%;
-        margin-left: -106px;
+        margin-inline-start: -106px;
         padding: 12px;
         position: absolute;
         text-align: center;
@@ -619,7 +619,7 @@ table {
             border-style: solid;
             border-width: 5px;
             left: 50%;
-            margin-left: -5px;
+            margin-inline-start: -5px;
             position: absolute;
             top: 100%
         }
@@ -721,8 +721,8 @@ button, .button, input[type=button], input[type=reset], input[type=submit] {
     button.link-style, .button.link-style, input[type=button].link-style, input[type=reset].link-style, input[type=submit].link-style {
         background-color: rgba(0,0,0,0) !important;
         color: #394f68;
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
         text-transform: none;
         text-decoration: underline
     }
@@ -858,7 +858,7 @@ select {
     background-size: 18px;
     background-repeat: no-repeat;
     height: 44px;
-    padding-right: 45px
+    padding-inline-end: 45px
 }
 
 label, .label, legend {
@@ -898,14 +898,14 @@ fieldset {
         flex: 1 1 100px;
         box-shadow: none;
         margin-bottom: 0;
-        margin-right: 15px;
+        margin-inline-end: 15px;
         max-width: 100%;
         min-width: 100px;
         padding: 0
     }
 
         fieldset .field:last-of-type {
-            margin-right: 0
+            margin-inline-end: 0
         }
 
         fieldset .field .field-meta label {
@@ -937,8 +937,8 @@ body.main-header--center {
 .container {
     width: 100%;
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     padding: 0 15px
 }
 
@@ -1087,7 +1087,7 @@ body.main-header--center {
 
 .main-header__advanced-search {
     font-size: .6875rem;
-    padding-right: 10px;
+    padding-inline-end: 10px;
     text-transform: uppercase
 }
 
@@ -1102,9 +1102,9 @@ body.main-header--center {
 }
 
 .main-header__search-form input {
-    padding-right: 46px;
+    padding-inline-end: 46px;
     margin-bottom: 0;
-    margin-right: -46px;
+    margin-inline-end: -46px;
     width: 100%
 }
 
@@ -1245,12 +1245,12 @@ body.main-header--center {
     list-style: none;
     display: flex;
     margin-bottom: 0;
-    padding-left: 0;
-    margin-left: 0
+    padding-inline-start: 0;
+    margin-inline-start: 0
 }
 
 .main-header--inline .main-navigation .navigation {
-    margin-right: -15px
+    margin-inline-end: -15px
 }
 
 .main-navigation .navigation li::before {
@@ -1346,8 +1346,8 @@ body.main-header--center {
 
         .main-navigation .navigation > li > ul > li > ul {
             margin-top: .8rem;
-            margin-left: 0;
-            padding-left: 0;
+            margin-inline-start: 0;
+            padding-inline-start: 0;
             list-style: none
         }
 
@@ -1356,8 +1356,8 @@ body.main-header--center {
             }
 
                 .main-navigation .navigation > li > ul > li > ul li ul {
-                    margin-left: 0;
-                    padding-left: 25px
+                    margin-inline-start: 0;
+                    padding-inline-start: 25px
                 }
 
     .main-navigation .navigation > li > ul a {
@@ -1398,8 +1398,8 @@ body.main-header--center {
 }
 
 .menu-drawer > .wrap {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     max-width: 1300px;
     display: block;
     padding: 0;
@@ -1421,7 +1421,7 @@ body.main-header--center {
         display: block;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        padding-left: 4rem;
+        padding-inline-start: 4rem;
         color: inherit !important;
         text-decoration: none
     }
@@ -1449,15 +1449,15 @@ body.main-header--center {
 
     .menu-drawer .menu-container ul {
         list-style: none;
-        margin-left: 0;
-        padding-left: 0;
+        margin-inline-start: 0;
+        padding-inline-start: 0;
         padding-bottom: 20px
     }
 
     .menu-drawer .menu-container li {
         position: static;
-        padding-left: 15px;
-        padding-right: 15px
+        padding-inline-start: 15px;
+        padding-inline-end: 15px
     }
 
         .menu-drawer .menu-container li.active {
@@ -1531,7 +1531,7 @@ body.main-header--center {
 }
 
 .menu-drawer .menu-item-has-children li:not(.menu-header) {
-    padding-left: 2rem
+    padding-inline-start: 2rem
 }
 
 .menu-drawer .menu-header {
@@ -1614,8 +1614,8 @@ body.menu-drawer-toggled {
 
 #advanced-search {
     max-width: 840px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     margin-top: 25px
 }
 
@@ -1693,7 +1693,7 @@ body.menu-drawer-toggled {
         }
 
         #advanced-search .field.multi-value .value:only-child .sub-field:last-of-type, #advanced-search .field.multi-value .value:only-child .sub-label:last-of-type {
-            margin-right: 0
+            margin-inline-end: 0
         }
 
     #advanced-search .field.multi-value .sub-field, #advanced-search .field.multi-value .sub-label {
@@ -1703,7 +1703,7 @@ body.menu-drawer-toggled {
 @media(min-width: 768px) {
     #advanced-search .field.multi-value .sub-field, #advanced-search .field.multi-value .sub-label {
         flex: 1 1 100px;
-        margin-right: 0;
+        margin-inline-end: 0;
         max-width: 100%;
         min-width: 100px
     }
@@ -1742,7 +1742,7 @@ body.menu-drawer-toggled {
 @media(min-width: 768px) {
     #advanced-search .field:not(.multi-value) .inputs > * {
         flex: 1 1 100px;
-        margin-right: 15px;
+        margin-inline-end: 15px;
         max-width: 100%;
         min-width: 100px
     }
@@ -1750,7 +1750,7 @@ body.menu-drawer-toggled {
 
 @media(min-width: 768px) {
     #advanced-search .field:not(.multi-value) .inputs > *:last-child {
-        margin-right: 0
+        margin-inline-end: 0
     }
 }
 
@@ -1818,11 +1818,11 @@ body.menu-drawer-toggled {
 }
 
     #advanced-search #property-queries .input-group > * {
-        margin-right: 15px
+        margin-inline-end: 15px
     }
 
         #advanced-search #property-queries .input-group > *:last-child {
-            margin-right: 0
+            margin-inline-end: 0
         }
 
     #advanced-search #property-queries .input-group .joiner {
@@ -1851,7 +1851,7 @@ body.menu-drawer-toggled {
     bottom: 0;
     gap: 20px;
     justify-content: center;
-    margin-left: calc((100vw - 100%)/-2);
+    margin-inline-start: calc((100vw - 100%)/-2);
     padding: 25px;
     position: sticky;
     width: 100vw
@@ -1865,8 +1865,8 @@ body.menu-drawer-toggled {
         flex-direction: column;
         gap: 15px;
         justify-content: initial;
-        margin-left: 0;
-        margin-right: -140px;
+        margin-inline-start: 0;
+        margin-inline-end: -140px;
         padding: 0;
         width: auto
     }
@@ -1963,14 +1963,14 @@ body.menu-drawer-toggled {
     float: left;
     font-size: .75rem;
     margin-bottom: .5rem;
-    padding-right: 10px;
+    padding-inline-end: 10px;
     width: 70px !important
 }
 
 .annotation-btn .annotation-tooltip dd {
     font-size: .75rem;
     margin: 0;
-    margin-left: 70px !important
+    margin-inline-start: 70px !important
 }
 
     .annotation-btn .annotation-tooltip dd.resource.media img {
@@ -2013,8 +2013,8 @@ body.menu-drawer-toggled {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     width: 80%;
     color: #fff;
     z-index: 2;
@@ -2080,7 +2080,7 @@ body.menu-drawer-toggled {
     font-size: .75rem;
     font-weight: 600;
     margin-bottom: 1.875rem;
-    margin-left: auto;
+    margin-inline-start: auto;
     padding: 0 0 0 20px;
     text-decoration: underline
 }
@@ -2116,7 +2116,7 @@ body.menu-drawer-toggled {
 
 .resources-linked .linked-resource .resource-tags {
     margin-bottom: 1rem;
-    margin-left: -10px
+    margin-inline-start: -10px
 }
 
 @media(min-width: 1024px) {
@@ -2177,7 +2177,7 @@ body.menu-drawer-toggled {
 
         .metadata dl > .property dt {
             margin-bottom: .5rem;
-            padding-right: 15px
+            padding-inline-end: 15px
         }
 
 @media(min-width: 768px) {
@@ -2194,12 +2194,12 @@ body.menu-drawer-toggled {
 
 @media(min-width: 768px) {
     .metadata dl > .property dd:not(.sidebar-region .metadata dl>.property dd) {
-        margin-left: 160px
+        margin-inline-start: 160px
     }
 }
 
 .metadata dl > .property .language {
-    margin-right: 5px
+    margin-inline-end: 5px
 }
 
 .metadata .value.resource .resource-link {
@@ -2210,7 +2210,7 @@ body.menu-drawer-toggled {
 .metadata .value.resource img {
     flex-shrink: 0;
     height: 60px;
-    margin-right: 1rem;
+    margin-inline-end: 1rem;
     object-fit: cover;
     width: 60px
 }
@@ -2305,8 +2305,8 @@ body.menu-drawer-toggled {
         }
 
 .carousel-block {
-    padding-left: 45px;
-    padding-right: 45px
+    padding-inline-start: 45px;
+    padding-inline-end: 45px
 }
 
     .carousel-block .slick-arrow {
@@ -2321,12 +2321,12 @@ body.menu-drawer-toggled {
         }
 
         .carousel-block .slick-arrow.slick-next {
-            padding-left: 3px;
+            padding-inline-start: 3px;
             right: -45px
         }
 
         .carousel-block .slick-arrow.slick-prev {
-            padding-right: 3px;
+            padding-inline-end: 3px;
             left: -45px
         }
 
@@ -2353,8 +2353,8 @@ body.menu-drawer-toggled {
 
 .collecting-block-form {
     max-width: 840px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     margin-top: 25px
 }
 
@@ -2408,12 +2408,12 @@ body.menu-drawer-toggled {
     }
 
     .item-with-metadata__header .language {
-        margin-left: 10px
+        margin-inline-start: 10px
     }
 
 .item-with-metadata__heading {
     margin-bottom: 0;
-    padding-left: 15px
+    padding-inline-start: 15px
 }
 
 .item-with-metadata__content {
@@ -2583,7 +2583,7 @@ body.menu-drawer-toggled {
             font-weight: 600;
             font-size: .75rem;
             color: var(--primary);
-            margin-right: 15px
+            margin-inline-end: 15px
         }
 
         .toc-block > ul > li > a {
@@ -2604,7 +2604,7 @@ body.menu-drawer-toggled {
             font-weight: 600;
             font-size: .4rem;
             color: var(--primary) !important;
-            margin-right: 15px
+            margin-inline-end: 15px
         }
 
 .list-of-sites {
@@ -2616,7 +2616,7 @@ body.menu-drawer-toggled {
     }
 
         .list-of-sites .site .site-thumbnail-image {
-            margin-right: 1.5rem !important
+            margin-inline-end: 1.5rem !important
         }
 
 .tl-timeline .tl-slidenav-next:focus, .tl-timeline .tl-slidenav-previous:focus {
@@ -2660,7 +2660,7 @@ body.menu-drawer-toggled {
 .pagination .row-count {
     color: #999;
     font-size: .8125rem;
-    margin-right: 1rem
+    margin-inline-end: 1rem
 }
 
 .pagination .pager label, .pagination .pager .page-count {
@@ -2668,7 +2668,7 @@ body.menu-drawer-toggled {
 }
 
 .pagination .pager .gotopage-btn {
-    margin-left: .3rem;
+    margin-inline-start: .3rem;
     padding: 8px 15px;
     width: 54px
 }
@@ -2790,7 +2790,7 @@ body.menu-drawer-toggled {
 @media(min-width: 1200px) {
     .faceted-browse-page #section-sidebar, .block-facetedBrowsePreview #section-sidebar {
         border-right: 1px solid #ececec;
-        padding-right: 1.6rem;
+        padding-inline-end: 1.6rem;
         width: 25%;
         z-index: auto !important
     }
@@ -2837,7 +2837,7 @@ body.menu-drawer-toggled {
 }
 
 .faceted-browse-page .faceted-results img, .block-facetedBrowsePreview .faceted-results img {
-    margin-right: 1rem
+    margin-inline-end: 1rem
 }
 
 .faceted-browse-page .faceted-results a, .block-facetedBrowsePreview .faceted-results a {
@@ -2872,24 +2872,24 @@ body.menu-drawer-toggled {
 .faceted-browse-page .select-list, .block-facetedBrowsePreview .select-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 0 !important;
+    margin-inline-start: 0 !important;
     width: 100%
 }
 
 @media(min-width: 1200px) {
     .faceted-browse-page .select-list, .block-facetedBrowsePreview .select-list {
         display: block;
-        margin-left: 1rem !important
+        margin-inline-start: 1rem !important
     }
 }
 
 .faceted-browse-page .select-list-item, .block-facetedBrowsePreview .select-list-item {
-    margin-left: 1rem
+    margin-inline-start: 1rem
 }
 
 @media(min-width: 1200px) {
     .faceted-browse-page .select-list-item, .block-facetedBrowsePreview .select-list-item {
-        margin-left: 0
+        margin-inline-start: 0
     }
 }
 
@@ -2898,7 +2898,7 @@ body.menu-drawer-toggled {
 }
 
 .faceted-browse-page .select-list-expand, .faceted-browse-page .select-list-collapse, .block-facetedBrowsePreview .select-list-expand, .block-facetedBrowsePreview .select-list-collapse {
-    margin-left: 1rem
+    margin-inline-start: 1rem
 }
 
 .faceted-browse-page #categories li, .block-facetedBrowsePreview #categories li {
@@ -2919,7 +2919,7 @@ body.menu-drawer-toggled {
         content: "";
         display: inline-block;
         font-size: .8rem;
-        padding-right: 5px;
+        padding-inline-end: 5px;
         text-decoration: none
     }
 
@@ -3010,7 +3010,7 @@ body.menu-drawer-toggled {
 
     .hierarchy-module .resource-list .resource-link img {
         float: right;
-        margin-left: 1em;
+        margin-inline-start: 1em;
         max-height: 3rem;
         max-width: 3rem
     }
@@ -3033,7 +3033,7 @@ body.menu-drawer-toggled {
 
     .browse-controls select {
         min-width: 100px;
-        padding-right: 45px;
+        padding-inline-end: 45px;
         width: auto
     }
 
@@ -3046,7 +3046,7 @@ body.menu-drawer-toggled {
         display: flex;
         flex-wrap: nowrap;
         gap: 15px;
-        margin-left: auto;
+        margin-inline-start: auto;
         max-width: 100%
     }
 
@@ -3102,7 +3102,7 @@ body.menu-drawer-toggled {
 
 .resource-grid {
     list-style: none;
-    padding-left: 0;
+    padding-inline-start: 0;
     position: relative
 }
 
@@ -3138,7 +3138,7 @@ body.menu-drawer-toggled {
 .resource-list {
     height: auto !important;
     list-style: none;
-    padding-left: 0
+    padding-inline-start: 0
 }
 
     .resource-list .resource {
@@ -3177,8 +3177,8 @@ body.menu-drawer-toggled {
 
 body.search .results {
     max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     margin-bottom: 40px
 }
 
@@ -3188,7 +3188,7 @@ body.search .results {
     }
 
 .uri-dereferencer-toggle, .uri-dereferencer-fetch {
-    margin-left: .5rem
+    margin-inline-start: .5rem
 }
 
 .uri-dereferencer-markup {
@@ -3255,7 +3255,7 @@ body.search .results {
 }
 
     #user-bar .user-links .logout {
-        margin-left: 0;
+        margin-inline-start: 0;
         margin-top: 15px;
         padding: 6px 10px;
         text-decoration: none
@@ -3263,7 +3263,7 @@ body.search .results {
 
 @media(min-width: 1024px) {
     #user-bar .user-links .logout {
-        margin-left: 12px;
+        margin-inline-start: 12px;
         margin-top: 0;
         padding: 0 6px
     }
@@ -3305,7 +3305,7 @@ body.search .results {
 }
 
     .main-footer__top-container > div:first-child {
-        padding-left: 0
+        padding-inline-start: 0
     }
 
     .main-footer__top-container > div:nth-child(2)::before, .main-footer__top-container > div:nth-child(3)::before {
@@ -3352,7 +3352,7 @@ body.search .results {
 
 .no-menu .main-footer__col1, .no-menu .main-footer__col3 {
     max-width: 600px;
-    margin-left: 0
+    margin-inline-start: 0
 }
 
 @media(min-width: 1024px) {
@@ -3385,8 +3385,8 @@ body.search .results {
         justify-content: center;
         list-style: none;
         margin-bottom: 0;
-        margin-left: 0;
-        padding-left: 0;
+        margin-inline-start: 0;
+        padding-inline-start: 0;
         text-align: center
     }
 
@@ -3419,10 +3419,10 @@ body.search .results {
 }
 
 .main-footer__col2 .navigation > li > ul {
-    margin-left: 0;
+    margin-inline-start: 0;
     margin-top: .8rem;
     list-style: none;
-    padding-left: 0
+    padding-inline-start: 0
 }
 
     .main-footer__col2 .navigation > li > ul li {
@@ -3430,8 +3430,8 @@ body.search .results {
     }
 
         .main-footer__col2 .navigation > li > ul li ul {
-            margin-left: 0;
-            padding-left: 25px
+            margin-inline-start: 0;
+            padding-inline-start: 25px
         }
 
 .main-footer__col2 .navigation a {
@@ -3552,21 +3552,21 @@ body.search .results {
 
 .alignleft {
     float: left;
-    margin-right: 1.5rem;
+    margin-inline-end: 1.5rem;
     margin-bottom: 1.5rem
 }
 
 .alignright {
     float: right;
-    margin-left: 1.5rem;
+    margin-inline-start: 1.5rem;
     margin-bottom: 1.5rem
 }
 
 .aligncenter {
     clear: both;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     margin-bottom: 1.5em
 }
 
@@ -3582,8 +3582,8 @@ body.search .results {
 
 .alignnarrow {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     max-width: 1024px;
     width: 100%
 }
