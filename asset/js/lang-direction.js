@@ -1,4 +1,32 @@
 /**
+ * sets direction and lignment according to language
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+  const resourceNames = document.querySelectorAll('.resource-name, .title');
+  
+  resourceNames.forEach(span => {
+    // Hebrew Unicode range: \u0590-\u05FF
+    // Arabic Unicode range: \u0600-\u06FF
+    if (/[\u0590-\u05FF\u0600-\u06FF]/.test(span.textContent)) {
+      // Contains Hebrew or Arabic - apply RTL styling
+      span.style.direction = 'rtl';
+      span.style.textAlign = 'right';
+      span.style.display = 'inline-block';
+      span.style.width = '100%';
+    } else {
+      // No Hebrew or Arabic - apply LTR styling
+      span.style.direction = 'ltr';
+      span.style.textAlign = 'left';
+      span.style.display = 'inline-block';
+      span.style.width = '100%';
+    }
+  });
+});
+
+
+
+/**
  * Automatic Page Direction Setter
  * Sets page direction based on HTML lang attribute
  * LTR for English, RTL for Hebrew and Arabic
@@ -43,12 +71,12 @@ function setPageDirection() {
     mainContent.setAttribute('dir', direction);
   }
   
+  // set footer text
   const texts = {
       en: "Music, Muslims and Jews: Exploring Past and Contemporary Relationalities is supported by a Breakthrough Research Grant of the Israel Science Foundation (grant no. 1172/24)",
       ar: "بحاجة إلى نص عربي",
       he: "צריך טקסט בעברית"
     };
-
   document.getElementById("footer-text").textContent = texts[langCode] || "";
 
   console.log(`Page direction set to: ${direction} for language: ${langAttribute}`);
