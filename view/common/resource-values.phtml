@@ -46,7 +46,7 @@ foreach ($values as $term => $propertyData):
         <dt>
         <?php echo $escape($translate($propertyLabel)); ?>
         <?php if ($propertyTerm !== null) : ?>
-        <span class="field-term">(<?php echo $escape($propertyTerm); ?>)</span>
+        <span class="field-term">(<?php echo $escape($translate($propertyTerm)); ?>)</span>
         <?php endif; ?>
         </dt>
         <?php foreach ($propertyValues as $value): ?>
