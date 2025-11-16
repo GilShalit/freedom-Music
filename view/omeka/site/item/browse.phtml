@@ -7,7 +7,7 @@ $this->htmlElement('body')->appendAttribute('class', 'item resource browse');
 
 $filterLocale = (bool) $this->siteSetting('filter_locale_values');
 $lang = $this->lang();
-$valueLang = $filterLocale ? [$lang, ''] : null;
+$valueLang = $this->siteSetting('locale');
 
 $query = $this->params()->fromQuery();
 $itemSetShow = isset($itemSet);
@@ -144,17 +144,17 @@ if (isset($itemSet)) {
     }
 }
 
+if ($valueLang==='en_US') {$valueLang='en';}
+
 if ($itemSetToDisplay) {
     $description = $itemSetToDisplay->value('dcterms:description', ['lang' => $valueLang]);
+    
     if ($description) {
         echo '<div class="item-set-description" style="margin: 1em 0; padding: 1em; background: #f5f5f5; border-radius: 4px;">';
         echo $description;
         echo '</div>';
     }
 }
-
-// Keep search filters if needed
-echo $this->searchFilters(); 
 ?>
 
 
@@ -166,9 +166,6 @@ echo $this->searchFilters();
         </div>
     <?php endif; ?>
     <?php echo $this->browse()->renderSortSelector('items'); ?>
-    <div class="advanced-search-container">
-        <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search']); ?>
-    </div>
 </div>
 
 <?php $this->trigger('view.browse.before'); ?>
