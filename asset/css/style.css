@@ -202,7 +202,6 @@ body, button, input, select, optgroup, textarea {
 
 h1, h2, h3, h4 {
     color: #333;
-    font-family: "Noto Serif",serif;
     margin-top: 0
 }
 
@@ -228,7 +227,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.1875rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 1.875rem
@@ -236,7 +235,7 @@ h2 {
 
 @media(min-width: 768px) {
     h2 {
-        font-size: 2.5rem
+        font-size: 1.5rem
     }
 }
 
@@ -490,7 +489,7 @@ figure {
 }
 
 .resource-list .resource-link .resource-name::after {
-    content: ':\00a0';
+  content: ':\00a0';
 }
 
 .resource .description {
@@ -502,7 +501,7 @@ figure {
     white-space: pre-line;
     word-wrap: break-word;
     word-break: break-word;
-    margin-inline-start: 1
+    margin-inline-start:1
 }
 
     .resource .description.fadeout {
@@ -556,6 +555,7 @@ table {
 .title {
     display: block;
     border-bottom: 1px solid #ececec;
+    padding-top:1.5rem;
     padding-bottom: 1rem;
     position: relative;
     width: 100%
@@ -1080,7 +1080,7 @@ body.main-header--center {
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
 }
 
 @media(min-width: 1024px) {
@@ -1092,7 +1092,7 @@ body.main-header--center {
 
 .main-header__advanced-search {
     font-size: 120%;
-    margin-bottom: 0.6rem;
+    margin-bottom:0.6rem;
 }
 
 .main-header__search-form form {
@@ -1130,7 +1130,16 @@ body.main-header--center {
 .main-header__main-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    background-color: #394f68!important;
+}
+
+.main-header__site-title a {
+    font-size: 2rem!important;
+    text-decoration: none!important;
+    color: #EEF7FA!important;
+    text-transform: uppercase!important;
+    margin: 2px 15px!important;
 }
 
 @media(min-width: 1024px) {
@@ -1148,7 +1157,7 @@ body.main-header--center {
 
 @media(min-width: 1024px) {
     .main-header__site-title {
-        max-width: 30%
+        max-width: none
     }
 
     .main-header--center .main-header__site-title {
@@ -1262,7 +1271,8 @@ body.main-header--center {
 }
 
 .main-navigation .navigation > li {
-    cursor: pointer position: relative;
+    cursor: pointer
+    position: relative;
 }
 
     .main-navigation .navigation > li:hover > ul, .main-navigation .navigation > li:focus-within > ul {
@@ -1279,7 +1289,7 @@ body.main-header--center {
         font-weight: 600
     }
 
-        .main-navigation .navigation > li.active > a::after {
+         .main-navigation .navigation > li.active > a::after {
             content: "";
             position: absolute;
             height: 1px;
@@ -1329,79 +1339,81 @@ body.main-header--center {
     margin-bottom: 0;
     padding-inline-start: 0;
     margin-inline-start: 0;
-    background-color: #394f68; /* ADD THIS */
+    background-color: #394f68;
 }
 
-    .main-navigation .navigation > li > ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        transition: opacity .5s ease-out;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        justify-content: center;
-        flex-wrap: wrap;
-        background-color: #394f68;
-        box-shadow: inset 0px 3px 0px 0px var(--primary);
-        position: absolute;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: auto;
-        min-width: 200px;
-        left: 0 top: 100%;
+.main-navigation .navigation > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: opacity .5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #394f68;
+    box-shadow: inset 0px 3px 0px 0px var(--primary);
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    min-width: 200px;
+    left: 0
+    top: 100%;
+}
+
+    .main-navigation .navigation > li > ul > li {
+        max-width: none;
+        width: 100%;
     }
 
-        .main-navigation .navigation > li > ul > li {
-            max-width: none;
-            width: 100%;
+        .main-navigation .navigation > li > ul > li > a {
+            font-weight: 600
+            padding: 8px 0;
         }
 
-            .main-navigation .navigation > li > ul > li > a {
-                font-weight: 600 padding: 8px 0;
+        .main-navigation .navigation > li > ul > li > ul {
+            margin-top: .8rem;
+            margin-inline-start: 0;
+            padding-inline-start: 3px;
+            list-style: none
+        }
+
+            .main-navigation .navigation > li > ul > li > ul li {
+                margin-bottom: 5px
             }
 
-            .main-navigation .navigation > li > ul > li > ul {
-                margin-top: .8rem;
-                margin-inline-start: 0;
-                padding-inline-start: 3px;
-                list-style: none
-            }
-
-                .main-navigation .navigation > li > ul > li > ul li {
-                    margin-bottom: 5px
+                .main-navigation .navigation > li > ul > li > ul li ul {
+                    margin-inline-start: 0;
+                    padding-inline-start: 25px
                 }
-
-                    .main-navigation .navigation > li > ul > li > ul li ul {
-                        margin-inline-start: 0;
-                        padding-inline-start: 25px
-                    }
-
-        .main-navigation .navigation > li > ul a {
-            color: #eef7fa;
-            text-transform: none;
-            text-decoration: none;
-            font-size: .94rem;
-            transition: color .5s ease
-        }
-
-            .main-navigation .navigation > li > ul a:hover {
-                color: #fff;
-                text-decoration: underline
-            }
-
-    .main-navigation .navigation a {
-        display: block
-    }
 
     .main-navigation .navigation > li > ul a {
         color: #eef7fa;
-        text-transform: uppercase !important; /* ADD THIS */
-        font-size: 1rem !important; /* ADD THIS */
+        text-transform: none;
         text-decoration: none;
-        transition: color .5s ease;
+        font-size: .94rem;
+        transition: color .5s ease
     }
+
+        .main-navigation .navigation > li > ul a:hover {
+            color: #fff;
+            text-decoration: underline
+        }
+
+.main-navigation .navigation a {
+    display: block
+}
+
+.main-navigation .navigation > li > ul a {
+    color: #eef7fa;
+    text-transform: uppercase !important; /* ADD THIS */
+    font-size: 1rem !important; /* ADD THIS */
+    text-decoration: none;
+    transition: color .5s ease;
+}
 
 .menu-drawer {
     display: block !important;
