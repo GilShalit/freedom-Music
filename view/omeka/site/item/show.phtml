@@ -12,6 +12,7 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 // Regions
 $mainBlockContent = $this->resourcePageBlocks($item);
 $mainHasBlocks = $mainBlockContent->hasBlocks();
+
 $leftSidebarBlockContent = $this->resourcePageBlocks($item, 'left');
 $leftSidebarHasBlocks = $leftSidebarBlockContent->hasBlocks();
 $rightSidebarBlockContent = $this->resourcePageBlocks($item, 'right');
@@ -19,7 +20,12 @@ $rightSidebarHasBlocks = $rightSidebarBlockContent->hasBlocks();
 ?>
 
 <?php echo $this->ResourceTags($item); ?>
-<?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 1); ?>
+<?php
+    $lLang = $lang;
+    //the english resource is saved with 'en' but the page language is 'en-US'
+    if ($lLang === "en-US") {$lLang = "en";} 
+    echo $this->pageTitle($item->displayTitle(null, $lLang), 1); 
+?>
 
 <?php $this->trigger('view.show.before'); ?>
 
