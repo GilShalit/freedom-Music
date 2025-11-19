@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   const resourceNames = document.querySelectorAll('.resource-name, .title');
-  
   resourceNames.forEach(span => {
     // Hebrew Unicode range: \u0590-\u05FF
     // Arabic Unicode range: \u0600-\u06FF
@@ -78,15 +77,20 @@ function setPageDirection() {
       he: "צריך טקסט בעברית"
     };
   document.getElementById("footer-text").innerHTML = texts[langCode] || "";
-
+  
   console.log(`Page direction set to: ${direction} for language: ${langAttribute}`);
 }
 
 // Auto-run on page load
-(function() {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setPageDirection);
-  } else {
-    setPageDirection();
-  }
+(function () {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setPageDirection);
+    } else {
+        setPageDirection();
+    }
 })();
+
+// fix problem in lightbox on rtl pages
+window.addEventListener('load', () => {
+    document.querySelector('.lg-container').dir = 'ltr';
+});
