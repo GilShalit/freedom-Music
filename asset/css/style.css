@@ -3195,7 +3195,8 @@ body.menu-drawer-toggled {
     .resource-list .resource__thumbnail {
         flex-shrink: 0;
         line-height: 1;
-        margin: 15px 15px 15px auto;
+        margin: 15px;
+        margin-inline-start: auto;
         order: 1
     }
 
