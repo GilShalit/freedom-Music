@@ -1,0 +1,228 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/*settings for homepage links*/
+.home-description {
+    font-size: 1.5rem;
+}
+
+.home-link-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-link-item {
+    background-color: #f4e8d0;
+    padding: 20px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+    .home-link-item::after {
+        content: '→';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 0.3s ease;
+        font-size: 2.5rem;
+    }
+/* RTL support - left arrow */
+[dir="rtl"] .home-link-item::after {
+    content: '←';
+}
+
+.home-link-item:hover {
+    background-color: #c8b896;
+}
+
+    .home-link-item:hover::after {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+/* RTL - move left on hover */
+[dir="rtl"] .home-link-item:hover::after {
+    transform: translateX(-45px);
+}
+
+.home-link-item a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.home-link-item:hover a {
+    color: #fff;
+}
+
+/*control height of upper bar (switcher and search)*/
+form#search-form {
+    line-height: 1;
+}
+
+input[type="text"][name="fulltext_search"] {
+    line-height: 1;
+    padding: 2px 15px;
+}
+
+form#search-form button {
+    padding: 2px 15px;
+}
+
+ul.language-switcher.locale-code {
+    margin-bottom: 0 !important;
+}
+
+/*eliminate Items heading from browse all search results*/
+h2:has(span.title:contains("Items")) {
+    display: none !important;
+}
+
+/*make the multi image  in the lightbox gallery background white instead of black*/
+.lg-backdrop, .lg-thumb-outer {
+    background-color: white !important;
+}
+/*eliminate the 'other media display in the lightbox gallery*/
+dl#other-media {
+    display: none;
+}
+
+.media-render.file:has(a img) {
+    display: none !important;
+}
+
+/* remove sorting by resource class from item set pages*/
+select[name="sort_by"] option[value="resource_class_label"] {
+    display: none;
+}
+
+/* move the drop down marker according to directionality in drop down selectors in browse pages */
+/* RTL version */
+html[dir="rtl"] select[name^="sort_"] {
+    background-position: left 0.5rem center !important;
+    padding-left: 2rem !important;
+    padding-right: 0.5rem !important;
+}
+/* LTR version */
+html[dir="ltr"] select[name^="sort_"] {
+    background-position: right 0.5rem center !important;
+    padding-right: 2rem !important;
+    padding-left: 0.5rem !important;
+}
+
+/*for item browser directionality*/
+dt {
+    padding-inline-end: 15px !important;
+}
+
+/*welcome page*/
+h1 {
+    font-family: inherit;
+}
+
+/*center main-content */
+#main-content {
+    max-width: 800px;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+}
+/* widen main-content on home page*/
+body.site-page-home #main-content {
+    max-width: 1200px !important;
+}
+
+.block {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.site-footer {
+    padding: 5px !important;
+}
+
+/* Slideshow*/
+.block-asset .assets {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: start center;
+}
+
+.block-asset .asset {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers image + caption */
+    opacity: 0;
+    animation: fade 25s infinite;
+}
+
+    .block-asset .asset img {
+        max-height: 400px;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+.asset .caption {
+    text-align: center;
+    margin-top: 0.2em;
+}
+
+.block-asset .asset:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.block-asset .asset:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.block-asset .asset:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.block-asset .asset:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.block-asset .asset:nth-child(5) {
+    animation-delay: 20s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    16% {
+        opacity: 1;
+    }
+
+    24% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
