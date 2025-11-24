@@ -51,6 +51,24 @@ $decorationClass = '';
 if (is_array($decoration) && in_array('media', $decoration)) {
     $decorationClass = $isGrid ? 'decoration' : 'decoration decoration--thumbnail';
 }
+
+// Function to truncate description to 30 words
+function truncateToWords($text, $wordLimit = 40) {
+    // Strip HTML tags first
+    $text = strip_tags($text);
+    
+    // Split into words
+    $words = preg_split('/\s+/', $text, -1, PREG_SPLIT_NO_EMPTY);
+    
+    // Check if truncation is needed
+    if (count($words) <= $wordLimit) {
+        return $text;
+    }
+    
+    // Truncate and add ellipsis
+    $truncated = implode(' ', array_slice($words, 0, $wordLimit));
+    return $truncated . ' [...]';
+}
 ?>
 
 <?php if ($itemSetShow): ?>
@@ -192,7 +210,7 @@ if ($itemSetToDisplay) {
                 <div class="resource__meta <?php echo ($isGrid) ? '' : 'media-object-section'; ?>">
                     <?php echo $item->link($item->displayTitle(null, $valueLang)); ?>
                     <?php if ($body): ?>
-                        <div class="description <?php echo ($bodyTruncate) ? $bodyTruncate : ''; ?>"><?php echo $escape($body); ?></div>
+                        <div class="description <?php echo ($bodyTruncate) ? $bodyTruncate : ''; ?>"><?php echo $escape(truncateToWords($body, 35)); ?></div>
                     <?php endif; ?>
                 </div>
             </div>
