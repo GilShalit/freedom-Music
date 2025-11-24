@@ -19,7 +19,7 @@ $decoration = $this->themeSetting('image_decoration');
             <?php echo $assetImage; ?>
         <?php endif; ?>
         <?php if ($attachment['caption'] !== ''): ?>
-        <div class="caption"><?php echo $escape($attachment['caption']); ?></div>
+        <div class="caption"><?php echo $escape($this->translate($attachment['caption'])); ?></div>
         <?php endif; ?>
     </div>
   <?php endforeach; ?>
