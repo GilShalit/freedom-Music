@@ -51,13 +51,17 @@ function setPageDirection() {
   
   // Determine direction based on language
   let direction;
+  let txtAlign;
   if (langCode === 'en') {
     direction = 'ltr';
+    txtAlign = 'left'; 
   } else if (langCode === 'he' || langCode === 'ar') {
     direction = 'rtl';
+    txtAlign = 'right';
   } else {
     // Default to LTR for other languages
     direction = 'ltr';
+    txtAlign = 'left'; 
     console.info(`Language "${langCode}" not explicitly handled, defaulting to LTR`);
   }
   
@@ -71,26 +75,37 @@ function setPageDirection() {
   }
  
   // set footer text
-  const texts = {
+  const footerTexts = {
       en: "Music, Muslims and Jews: Exploring Past and Contemporary Relationalities is supported by a Breakthrough Research Grant of the Israel Science Foundation (grant no. 1172/24). Contact: <a href='mailto:mmj@gmail.com'>mmj@gmail.com</a>",
-      ar: "بحاجة إلى نص عربي",
-      he: "צריך טקסט בעברית"
+      ar: "''الموسيقى والمسلمون واليهود: استكشاف العلاقات المتبادلة في الماضي والحاضر'' ممول بمنحة ''أبحاث رائدة'' من صندوق العلوم الوطني الإسرائيلي (منحة رقم 1172/24). للتواصل: <a href='mailto:mmj@gmail.com'>mmj@gmail.com</a>",
+      he: "''מוזיקה, מוסלמים ויהודים: מחקר על יחסיות בעבר ובהווה'' ממומן ע''י מענק ''מחקר פורץ דרך'' של הקרן הלאומית למדע (מענק מס' 1172/24). ליצירת קשר: <a href='mailto:mmj@gmail.com'>mmj@gmail.com</a>"
     };
-  document.getElementById("footer-text").innerHTML = texts[langCode] || "";
+  document.getElementById("footer-text").innerHTML = footerTexts[langCode] || "";
+  
+  setTextDirection(document.getElementById('footer-text'), direction, txtAlign);
+
   
   console.log(`Page direction set to: ${direction} for language: ${langAttribute}`);
 }
 
+function setTextDirection(element, direction, textAlign) {
+  if (element) {
+    element.style.direction = direction;
+    element.style.textAlign = textAlign;
+  }
+}
+
 // Auto-run on page load
-(function () {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setPageDirection);
-    } else {
-        setPageDirection();
-    }
+(function() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setPageDirection);
+  } else {
+    setPageDirection();
+  }
 })();
 
 // fix problem in lightbox on rtl pages
 window.addEventListener('load', () => {
-    document.querySelector('.lg-container').dir = 'ltr';
+  var lg= document.querySelector('.lg-container');
+  if (lg) {lg.dir = 'ltr';}
 });
