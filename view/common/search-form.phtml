@@ -17,6 +17,7 @@ $searchValue = $this->escapeHtml($this->params()->fromQuery('fulltext_search', '
 ?>
 
 <form action="<?php echo $this->escapeHtml($searchAction); ?>" id="search-form">
+    <input type="hidden" name="view" value="list">
     <input type="text" name="fulltext_search" value="<?php echo $searchValue; ?>"
         placeholder="<?php echo $translate('Search'); ?>"
         aria-label="<?php echo $translate('Search'); ?>">
